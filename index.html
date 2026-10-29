@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gato vs IA</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gato <span class="vs">vs</span> IA</h1>
+
+    <section class="controls">
+      <label>
+        Dificultad
+        <select id="difficulty">
+          <option value="easy">Fácil</option>
+          <option value="medium">Media</option>
+          <option value="hard" selected>Imposible</option>
+        </select>
+      </label>
+      <label>
+        Empieza
+        <select id="first-player">
+          <option value="human">Tú (X)</option>
+          <option value="ai">IA (O)</option>
+        </select>
+      </label>
+    </section>
+
+    <p id="status" class="status" aria-live="polite">Tu turno (X)</p>
+
+    <div id="board" class="board" role="grid" aria-label="Tablero de gato"></div>
+
+    <button id="restart" class="btn">Nueva partida</button>
+
+    <section class="scoreboard">
+      <div><span class="label">Tú</span><span id="score-human">0</span></div>
+      <div><span class="label">Empates</span><span id="score-draw">0</span></div>
+      <div><span class="label">IA</span><span id="score-ai">0</span></div>
+    </section>
+  </main>
+
+  <script src="js/ai.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
